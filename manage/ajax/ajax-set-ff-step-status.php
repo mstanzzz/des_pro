@@ -1,0 +1,56 @@
+<?php
+if(strpos($_SERVER['REQUEST_URI'], 'solvitware/' )){ 
+	$real_root = $_SERVER['DOCUMENT_ROOT'].'/solvitware';
+}elseif(strpos($_SERVER['REQUEST_URI'], 'designitpro' )){  
+	$real_root = $_SERVER['DOCUMENT_ROOT'].'/designitpro'; 
+}elseif(strpos($_SERVER['REQUEST_URI'], 'storittek/' )){  
+	$real_root = $_SERVER['DOCUMENT_ROOT'].'/storittek'; 
+}else{
+	$real_root = $_SERVER['DOCUMENT_ROOT']; 	
+}
+
+
+require_once($real_root.'/includes/class.dbcustom.php');
+$dbCustom = new DbCustom();
+
+require_once($real_root."/includes/config.php");
+require_once($real_root."/manage/admin-includes/class.order_fulfillment.php");
+
+$ff = new OrderFulfillment;
+
+$order_id = (isset($_GET['order_id'])) ? $_GET['order_id'] : 0;   
+$status = (isset($_GET['status'])) ? $_GET['status'] : 0;   
+$step_id = (isset($_GET['step_id'])) ? $_GET['step_id'] : 0;   
+
+$test = 0;
+
+if($status == 1){
+
+	$ff->clearStepStatus($order_id, $step_id);
+	
+	$ff->setStepStart($order_id, $step_id);
+
+$test = 1;
+
+}
+
+if($status == 2){
+
+	$ff->parkStepCheck($order_id, $step_id);
+
+$test = 2;	
+
+}
+if($status == 3){
+
+	$ff->completeStep($order_id, $step_id);
+
+	$test = 3;
+
+}
+
+
+echo $test;
+
+
+?>

@@ -1,0 +1,24 @@
+[28-Mar-2023 11:26:23 America/Vancouver] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ctgtool_ctg_nath'@'localhost' (using password: YES) in C:\xampp\htdocs\designitpro\includes\class.dbcustom.php:7
+Stack trace:
+#0 C:\xampp\htdocs\designitpro\includes\class.dbcustom.php(7): mysqli->__construct('localhost', 'ctgtool_ctg_nat...', Object(SensitiveParameterValue), 'ctgtool_N_CART')
+#1 C:\xampp\htdocs\designitpro\includes\class.shopping_cart.php(58): DbCustom->getDbConnect('ctgtool_N_CART')
+#2 C:\xampp\htdocs\designitpro\includes\class.shopping_cart.php(21): ShoppingCart->reloadCart(Object(DbCustom))
+#3 C:\xampp\htdocs\designitpro\template_default.php(34): ShoppingCart->__construct(Object(DbCustom))
+#4 {main}
+  thrown in C:\xampp\htdocs\designitpro\includes\class.dbcustom.php on line 7
+[28-Mar-2023 11:28:29 America/Vancouver] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ctgtool_ctg_nath'@'localhost' (using password: YES) in C:\xampp\htdocs\designitpro\includes\class.dbcustom.php:7
+Stack trace:
+#0 C:\xampp\htdocs\designitpro\includes\class.dbcustom.php(7): mysqli->__construct('localhost', 'ctgtool_ctg_nat...', Object(SensitiveParameterValue), 'ctgtool_N_CART')
+#1 C:\xampp\htdocs\designitpro\includes\class.shopping_cart.php(58): DbCustom->getDbConnect('ctgtool_N_CART')
+#2 C:\xampp\htdocs\designitpro\includes\class.shopping_cart.php(21): ShoppingCart->reloadCart(Object(DbCustom))
+#3 C:\xampp\htdocs\designitpro\template_default.php(34): ShoppingCart->__construct(Object(DbCustom))
+#4 {main}
+  thrown in C:\xampp\htdocs\designitpro\includes\class.dbcustom.php on line 7
+[28-Mar-2023 11:29:53 America/Vancouver] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ctgtool_ctg_nath'@'localhost' (using password: YES) in C:\xampp\htdocs\designitpro\includes\class.dbcustom.php:7
+Stack trace:
+#0 C:\xampp\htdocs\designitpro\includes\class.dbcustom.php(7): mysqli->__construct('localhost', 'ctgtool_ctg_nat...', Object(SensitiveParameterValue), 'ctgtool_N_CART')
+#1 C:\xampp\htdocs\designitpro\includes\class.shopping_cart.php(58): DbCustom->getDbConnect('ctgtool_N_CART')
+#2 C:\xampp\htdocs\designitpro\includes\class.shopping_cart.php(21): ShoppingCart->reloadCart(Object(DbCustom))
+#3 C:\xampp\htdocs\designitpro\template_default.php(34): ShoppingCart->__construct(Object(DbCustom))
+#4 {main}
+  thrown in C:\xampp\htdocs\designitpro\includes\class.dbcustom.php on line 7
