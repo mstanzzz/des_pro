@@ -2,10 +2,8 @@
 session_start();
 if(strpos($_SERVER['DOCUMENT_ROOT'], 'xampp')>0){
 	$site = 'local';	
-}elseif(strpos($_SERVER['DOCUMENT_ROOT'], 'ctgtest')>0){
-	$site = 'storit';
-}elseif(strpos($_SERVER['DOCUMENT_ROOT'], 'ctgtool')>0){
-	$site = 'designitpro';
+}elseif(strpos($_SERVER['DOCUMENT_ROOT'], 'XXX1')>0){
+	$site = 'XXX1';
 }else{
 	$site = 'live';
 }
@@ -17,8 +15,8 @@ if($site == "local"){
 	define("DB_HOST", "127.0.0.1");
 	define("DB_USERNAME", 'root');
 	define("DB_PSWD", '');
-	define("SITEROOT", '/designitpro/');
-}elseif($site == "designitpro"){
+	define("SITEROOT", '/des_pro/');
+}elseif($site == "XXX1"){
 
 	define('SITE_N_DATABASE', 'XXX_SITE');
 	define('CART_N_DATABASE', 'XXX_N_CART');
