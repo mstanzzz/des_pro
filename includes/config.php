@@ -6,21 +6,10 @@ if(strpos($_SERVER['DOCUMENT_ROOT'], 'xampp')>0){
 	$site = 'storit';
 }elseif(strpos($_SERVER['DOCUMENT_ROOT'], 'ctgtool')>0){
 	$site = 'designitpro';
-	
-	
-	
 }else{
 	$site = 'live';
 }
-//date_default_timezone_set('America/Vancouver');
-
-
-//$site = "live";
-//$site = 'local';
-//$site = 'designitpro';
-//$site = 'designitpro';
-
-	
+date_default_timezone_set('America/Vancouver');
 if($site == "local"){	
 	define('CART_N_DATABASE', 'ctgtest_N_CART');
 	define('SITE_N_DATABASE', 'ctgtest_N_SITE');		
@@ -29,28 +18,27 @@ if($site == "local"){
 	define("DB_USERNAME", 'root');
 	define("DB_PSWD", '');
 	define("SITEROOT", '/designitpro/');
-
 }elseif($site == "designitpro"){
 
-	define('SITE_N_DATABASE', 'ctgtool_N_SITE');
-	define('CART_N_DATABASE', 'ctgtool_N_CART');
-	define('USER_DATABASE', 'ctgtool_USERS');
+	define('SITE_N_DATABASE', 'XXX_SITE');
+	define('CART_N_DATABASE', 'XXX_N_CART');
+	define('USER_DATABASE', 'XXX_USERS');
 
-	define('DB_HOST', 'localhost');	
-	define('DB_USERNAME', 'ctgtool_ctg_nath');
-	define('DB_PSWD', 'nathannn1A@@');
-	define("SITEROOT", 'https://designitpro.com/');
+	define('DB_HOST', 'XXX');	
+	define('DB_USERNAME', 'XXX');
+	define('DB_PSWD', 'XXX');
+	define("SITEROOT", 'XXX.com/');
 
 
 }else{
 
-	define('SITE_N_DATABASE', 'bridgepo_N_SITE');
-	define('CART_DATABASE', 'bridgepo_N_CART');
-	define('USER_DATABASE', 'bridgepo_USERS');
+	define('SITE_N_DATABASE', 'XXX_SITE');
+	define('CART_DATABASE', 'XXX_CART');
+	define('USER_DATABASE', 'XXX_USERS');
 
-	define('DB_HOST', 'localhost');	
-	define('DB_USERNAME', 'bridgepo_bridgep');
-	define('DB_PSWD', 'lara1@123');
+	define('DB_HOST', 'XXX');	
+	define('DB_USERNAME', 'XXX');
+	define('DB_PSWD', 'XXX');
 
 }
 
